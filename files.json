@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1",
+        "name": "Vulcan Backdoor",
+        "description": "Backdoor minecraft servers with a fake vulcan plugin file.",
+        "category": "backdoor",
+        "detailsPage": "vulcanbackdoor.html"
+    },
+    {
+        "id": "2",
+        "name": "Meteor Plugin",
+        "description": "Enhances Minecraft gameplay with meteor-related features.",
+        "category": "meteor-addons",
+        "detailsPage": "meteorplugin.html"
+    },
+    {
+        "id": "3",
+        "name": "Troll Plugin",
+        "description": "Adds various troll commands to Minecraft servers.",
+        "category": "trolls",
+        "detailsPage": "trollplugin.html"
+    }
+]

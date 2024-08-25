@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copium - Home</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Copium</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+    <main>
+        <section id="intro">
+            <h2>Welcome to Copium</h2>
+            <p>Your one-stop destination for downloading and exploring various resources including plugins, backdoors, trolls, and meteor addons.</p>
+        </section>
+        <section id="downloads">
+            <h2>Available Downloads</h2>
+            <input type="text" id="search-bar" placeholder="Search...">
+            <select id="filter">
+                <option value="">Filter by Category</option>
+                <option value="plugins">Plugins</option>
+                <option value="backdoors">Backdoors</option>
+                <option value="trolls">Trolls</option>
+                <option value="meteor-addons">Meteor Addons</option>
+            </select>
+            <div id="file-list">
+                <!-- File entries will be dynamically generated here -->
+                <div class="file-entry">
+                    <h3>File Title 1</h3>
+                    <p>Short description of File 1.</p>
+                    <a href="resource-details.html" class="view-more">View more</a>
+                </div>
+                <div class="file-entry">
+                    <h3>File Title 2</h3>
+                    <p>Short description of File 2.</p>
+                    <a href="resource-details.html" class="view-more">View more</a>
+                </div>
+                <!-- More file entries -->
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

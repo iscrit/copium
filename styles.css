@@ -1,0 +1,133 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #eee;
+    background: #000;
+    overflow: hidden;
+}
+
+/* Header Styles */
+header {
+    background: rgba(34, 34, 34, 0.9);
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #1e90ff;
+    font-size: 2em;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: #eee;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #1e90ff;
+}
+
+/* Main Section Styles */
+main {
+    padding: 80px 20px 20px; /* Space for fixed header */
+}
+
+#intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#intro h2 {
+    color: #1e90ff;
+    font-size: 2em;
+}
+
+#intro p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Downloads Section Styles */
+#downloads {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+#downloads h2 {
+    color: #1e90ff;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+#search-bar {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #1e90ff;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+#filter {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #1e90ff;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* File Entries Styles */
+.file-entry {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.file-entry:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.file-entry h3 {
+    margin: 0;
+    color: #1e90ff;
+}
+
+.file-entry p {
+    margin: 10px 0;
+    color: #ccc;
+}
+
+.view-more {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.view-more:hover {
+    text-decoration: underline;
+}

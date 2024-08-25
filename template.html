@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Details</title>
+    <link rel="stylesheet" href="details.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">Back to Home</a>
+        <h1>Basic Minecraft Plugin</h1>
+    </header>
+    <main>
+        <section id="resource-details">
+            <h2>Installation</h2>
+            <p>
+                To install the <strong>Basic Minecraft Plugin</strong>, follow these steps:
+                <ol>
+                    <li><strong>Download</strong> the plugin file from the website.</li>
+                    <li>Place the downloaded <code>.jar</code> file into the <code>"plugins"</code> folder of your Minecraft server directory.</li>
+                    <li><strong>Restart</strong> or reload your Minecraft server.</li>
+                    <li>Verify the plugin is loaded by using the <code>/plugins</code> command in the server console.</li>
+                </ol>
+            </p>
+            <h2>What it does</h2>
+            <p>
+                The <strong>Basic Minecraft Plugin</strong> adds several useful commands to your server that enhance gameplay. 
+                Features include:
+                <ul>
+                    <li><strong>A command to teleport players</strong> to specific coordinates.</li>
+                    <li><strong>Customizable welcome messages</strong> for new players.</li>
+                    <li><strong>A basic economy system</strong> to track player currency.</li>
+                </ul>
+            </p>
+            <h2>How to use</h2>
+            <p>
+                After installing the plugin, you can use the following commands:
+                <ul>
+                    <li><code>/teleport &lt;x&gt; &lt;y&gt; &lt;z&gt;</code> - Teleports the player to the specified coordinates.</li>
+                    <li><code>/welcome &lt;message&gt;</code> - Sets a custom welcome message for new players.</li>
+                    <li><code>/balance</code> - Displays your current balance in the economy system.</li>
+                </ul>
+                Refer to the plugin’s configuration file to customize settings and commands.
+            </p>
+            <button id="download-btn" onclick="window.location.href='https://roblox.com'">Download</button>
+            <div id="progress-container" style="display: none;"> 
+                <div id="progress-circle"></div>
+                <div id="progress-text">0%</div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

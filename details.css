@@ -1,0 +1,174 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #eee;
+    background: #000;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Header Styles */
+header {
+    background: #222;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Added shadow for depth */
+}
+
+header a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em; /* Adjusted for better readability */
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 2em; /* Increased for better visibility */
+}
+
+/* Main Section Styles */
+main {
+    margin-top: 80px; /* Space for the fixed header */
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Resource Details Styles */
+#resource-details {
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+    color: #e0e0e0;
+    border-bottom: 2px solid #1e90ff;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #e0e0e0;
+    border-bottom: 1px solid #1e90ff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 10px 0;
+    color: #ddd;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #eee;
+    background: #000;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Star Field Styles */
+#star-field {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.star {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    opacity: 0.5;
+    animation: starAnimation 2s infinite alternate;
+}
+
+@keyframes starAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+
+/* Button Styles */
+button {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4682b4;
+}
+
+/* Progress Circle Styles */
+#progress-container {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#progress-circle {
+    border: 8px solid rgba(255, 255, 255, 0.1);
+    border-top: 8px solid #1e90ff;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    animation: spin 2s linear infinite;
+    position: relative;
+}
+
+#progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 18px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
