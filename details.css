@@ -3,14 +3,14 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #eee;
-    background: #000;
-    overflow: hidden;
+    background: linear-gradient(135deg, #000428 0%, #004e92 100%);
+    overflow-x: hidden;
     position: relative;
 }
 
 /* Header Styles */
 header {
-    background: #222;
+    background: rgba(34, 34, 34, 0.8);
     padding: 15px;
     position: fixed;
     width: 100%;
@@ -18,31 +18,35 @@ header {
     left: 0;
     z-index: 1000;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Added shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    animation: slideDown 1s ease-out;
 }
 
 header a {
     color: #1e90ff;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2em; /* Adjusted for better readability */
+    font-size: 1.2em;
+    transition: color 0.3s ease;
 }
 
 header a:hover {
-    text-decoration: underline;
+    color: #4682b4;
 }
 
 h1 {
     margin: 0;
     color: #fff;
-    font-size: 2em; /* Increased for better visibility */
+    font-size: 2em;
+    animation: fadeIn 2s ease-in-out;
 }
 
 /* Main Section Styles */
 main {
-    margin-top: 80px; /* Space for the fixed header */
+    margin-top: 80px;
     padding: 20px;
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    box-sizing: border-box;
+    animation: fadeInUp 1s ease-out;
 }
 
 /* Resource Details Styles */
@@ -53,6 +57,7 @@ main {
     border-radius: 10px;
     max-width: 800px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    animation: pulse 2s infinite;
 }
 
 h2 {
@@ -60,6 +65,10 @@ h2 {
     border-bottom: 2px solid #1e90ff;
     padding-bottom: 5px;
     margin-bottom: 15px;
+    background: linear-gradient(90deg, #1e90ff, #4682b4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 3s infinite;
 }
 
 h3 {
@@ -67,6 +76,7 @@ h3 {
     border-bottom: 1px solid #1e90ff;
     padding-bottom: 5px;
     margin-bottom: 10px;
+    animation: pulse 3s infinite;
 }
 
 p {
@@ -81,17 +91,7 @@ section {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-
-/* General Styles */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #eee;
-    background: #000;
-    overflow: hidden;
-    position: relative;
+    animation: fadeIn 1.5s ease-out;
 }
 
 /* Star Field Styles */
@@ -112,10 +112,10 @@ body {
     width: 2px;
     height: 2px;
     opacity: 0.5;
-    animation: starAnimation 2s infinite alternate;
+    animation: starTwinkle 2s infinite alternate;
 }
 
-@keyframes starAnimation {
+@keyframes starTwinkle {
     0% {
         transform: scale(1);
     }
@@ -124,21 +124,22 @@ body {
     }
 }
 
-
 /* Button Styles */
 button {
-    background-color: #1e90ff;
+    background: linear-gradient(135deg, #1e90ff, #4682b4);
     color: white;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease;
+    animation: hoverScale 0.3s infinite;
 }
 
 button:hover {
-    background-color: #4682b4;
+    background: linear-gradient(135deg, #4682b4, #1e90ff);
+    transform: scale(1.1);
 }
 
 /* Progress Circle Styles */
@@ -155,8 +156,7 @@ button:hover {
     width: 80px;
     height: 80px;
     margin: 0 auto;
-    animation: spin 2s linear infinite;
-    position: relative;
+    animation: spin 2s linear infinite, pulse 1.5s infinite alternate;
 }
 
 #progress-text {
@@ -168,7 +168,128 @@ button:hover {
     font-size: 18px;
 }
 
+/* Animations */
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+@keyframes slideDown {
+    0% { transform: translateY(-100%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 rgba(30, 144, 255, 0.7); }
+    100% { box-shadow: 0 0 20px rgba(30, 144, 255, 0.9); }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes hoverScale {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    header a {
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    #resource-details {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    #progress-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    #progress-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    header a {
+        font-size: 0.9em;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    #resource-details {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    #progress-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    #progress-text {
+        font-size: 14px;
+    }
 }

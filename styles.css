@@ -4,13 +4,13 @@ body {
     font-family: 'Arial', sans-serif;
     color: #eee;
     background: #000;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /* Header Styles */
 header {
     background: rgba(34, 34, 34, 0.9);
-    padding: 20px;
+    padding: 15px 20px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -24,18 +24,18 @@ header {
 header h1 {
     margin: 0;
     color: #1e90ff;
-    font-size: 2em;
+    font-size: 1.8em;
 }
 
 nav {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 
 nav a {
     color: #eee;
     text-decoration: none;
-    font-size: 1em;
+    font-size: 0.9em;
     transition: color 0.3s ease;
 }
 
@@ -50,37 +50,37 @@ main {
 
 #intro {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 #intro h2 {
     color: #1e90ff;
-    font-size: 2em;
+    font-size: 1.8em;
 }
 
 #intro p {
-    font-size: 1.2em;
+    font-size: 1.1em;
     max-width: 800px;
     margin: 0 auto;
 }
 
 /* Downloads Section Styles */
 #downloads {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 15px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
 }
 
 #downloads h2 {
     color: #1e90ff;
-    font-size: 1.8em;
-    margin-bottom: 20px;
+    font-size: 1.6em;
+    margin-bottom: 15px;
 }
 
-#search-bar {
-    width: calc(100% - 20px);
+#search-bar, #filter {
+    width: 100%;
     padding: 10px;
     border: 1px solid #1e90ff;
     border-radius: 5px;
@@ -90,19 +90,9 @@ main {
     color: #fff;
 }
 
-#filter {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #1e90ff;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.2);
-    color: #fff;
-    margin-bottom: 20px;
-}
-
 /* File Entries Styles */
 .file-entry {
-    margin: 20px 0;
+    margin: 15px 0;
     padding: 15px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 8px;
@@ -130,4 +120,83 @@ main {
 
 .view-more:hover {
     text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 0.8em;
+    }
+
+    #intro h2 {
+        font-size: 1.5em;
+    }
+
+    #downloads h2 {
+        font-size: 1.4em;
+    }
+
+    #downloads {
+        padding: 10px;
+    }
+
+    #search-bar, #filter {
+        font-size: 0.9em;
+    }
+
+    .file-entry h3 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    nav a {
+        font-size: 0.7em;
+    }
+
+    #intro h2 {
+        font-size: 1.2em;
+    }
+
+    #downloads h2 {
+        font-size: 1.2em;
+    }
+
+    #downloads {
+        padding: 8px;
+    }
+
+    #search-bar, #filter {
+        font-size: 0.8em;
+    }
+
+    .file-entry {
+        padding: 10px;
+    }
+
+    .file-entry h3 {
+        font-size: 1em;
+    }
 }
